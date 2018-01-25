@@ -1,0 +1,28 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Framework Used: Bootstrap 3.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "resume",
+    "bootstrap",
+    "jquery",
+    "chart"
+  ],
+  "author": "AlexWang",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.23.3",
+    "chart.js": "^2.7.1",
+    "devicons": "^1.8.0",
+    "gulp": "^4.0.0",
+    "jquery": "^3.2.1",
+    "jquery.localscroll": "^2.0.0",
+    "jquery.scrollto": "^2.1.2",
+    "scrollreveal": "^3.3.6"
+  }
+}
