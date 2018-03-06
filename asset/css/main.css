@@ -195,6 +195,22 @@ i[class*="fa-check"] {
 	color: #e3c33b;
 }
 
+#details .btn-default {
+	color: #dddada;
+	background-color: transparent;
+}
+
+#details .btn-default:hover {
+	color: #fff;
+	background-color: rgba(255, 255, 255, .18);
+}
+
+#details .btn {
+	padding: 10px 20px;
+	margin: 0;
+	border-radius: 0;
+}
+
 #details span {
 	display: block;
 	font-size: 13px;
@@ -202,6 +218,16 @@ i[class*="fa-check"] {
 	color: #a5a5a5;
 }
 
+#details div > a {
+	font-size: 18px;
+
+}
+
+@media (min-width: 1199px) {
+	#details span {
+		padding-right: 65px;
+	}
+}
 
 /*----------------section basic layout-----------------------*/
 
@@ -229,7 +255,7 @@ div > h5 > i {
 }
 
 #details div > a > i {
-	font-size: 15px;
+	font-size: 17px;
 	padding-right: 10px;
 }
 
@@ -373,7 +399,7 @@ footer ul li a.locator .qr-code:after {  /* 向上箭头 */
 		background-size: 130px 130px;
 	}
 	footer ul li a.locator .qr-code:after {  /* 向上箭头 */
-		top: -15px;
+		top: -10px;
 		left: 20px;
 		border-left: 7px solid transparent;
 		border-right: 7px solid transparent;
