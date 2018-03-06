@@ -206,7 +206,7 @@ i[class*="fa-check"] {
 }
 
 #details .btn {
-	padding: 10px 20px;
+	padding: 6px 29px;
 	margin: 0;
 	border-radius: 0;
 }
@@ -225,7 +225,7 @@ i[class*="fa-check"] {
 
 @media (min-width: 1199px) {
 	#details span {
-		padding-right: 65px;
+		padding-right: 98px;
 	}
 }
 
@@ -255,7 +255,7 @@ div > h5 > i {
 }
 
 #details div > a > i {
-	font-size: 17px;
+	font-size: 20px;
 	padding-right: 10px;
 }
 
