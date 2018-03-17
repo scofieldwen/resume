@@ -1,0 +1,11 @@
+{
+    "minify": true,
+    "options": [
+      "mq",
+      "html5shiv",
+      "setClasses"
+    ],
+    "feature-detects": [
+      "test/touchevents"
+    ]
+  }
