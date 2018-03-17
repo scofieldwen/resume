@@ -5,12 +5,12 @@ body {
 }
 
 body {
-	padding-top: 52px;
-	/* font-size: 1.2em; */
+	padding-top: 52px;  /* font-size: 1.2em; */
 	font-size: 12px;
-	line-height: 1.7em;
+	line-height: 1.65em;
 	background-color: #f2f2f2;
 	color: #555;
+	word-break: break-all;
 }
 
 hr {
@@ -31,21 +31,35 @@ a.defult-link, a.defult-link:hover {
 color: #fff;
 }
 
+p {
+	line-height: 1.65;
+	margin-bottom: 20px;
+}
+
 .locator {
 	position: relative;
+}
+
+.dark {  /* 暗色背景 */
+	color: #dddada;
+	background: #1b3545;
+}
+
+i[class*="fa-check"] { /* 技能栏图标颜色 */
+	color: #e3c33b;
 }
 
 /*--------------------------------
         Topbar
 ---------------------------------*/
 
-.navbar-nav {
+nav .navbar-nav {
 	float: none;
 	display: table;
 	margin: 0 auto;
 }
 
-.navbar-nav > li {
+nav .navbar-nav > li {
 	float: none;
 	display: inline-block;
 }
@@ -87,8 +101,8 @@ nav.navbar ul > li > a {
 	position: relative;
 	z-index: 0;
 	align-items: center;
-	justify-content: center;
-	/*  background-color: antiquewhite;*/
+	/* justify-content: center; */
+	margin: 0;
 }
 
 .header-picture {
@@ -99,6 +113,7 @@ nav.navbar ul > li > a {
 
 .header-picture > img {
 	max-width: 100%;
+	behavior: url(PIE.htc);
 	border-radius: 50%;
 	-webkit-filter: sepia(85%) hue-rotate(-14deg);
 	filter: sepia(85%) hue-rotate(-14deg);
@@ -121,13 +136,11 @@ nav.navbar ul > li > a {
 }
 
 header,
-.header-content:before {
-	/*shezhitouxiangkuanghebeijing*/
-	background: url('../images/2_bg.jpg') 0 / cover fixed;
+.header-content:before {  /*设置背景路径*/
+	background: url('../images/1_bg.jpg') 0 / cover fixed;
 }
 
-/*------------xuhuabeijng-----------------*/
-
+/*------------虚化背景-----------------*/
 header .header-content {
 	color: #000000;
 	width: 100%;
@@ -135,6 +148,7 @@ header .header-content {
 	background: hsla(0, 0%, 100%, .2) border-box;
 	overflow: hidden;
 	text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+	margin: auto;
 }
 
 .header-content:before {
@@ -150,19 +164,15 @@ header .header-content {
 	z-index: -1;
 }
 
-/*-------------------------------------*/
-
 header .header-content h1 {
-	font-size: 4.1666em;
-	/*50px*/
+	font-size: 4.1666em;  /*50px*/
 }
 
 header .header-content p {
-	font-size: 1.3333em;
-	/*16px*/
+	font-size: 1.3333em;  /*16px*/
 }
 
-@media (min-width: 769px) {
+@media screen and (min-width: 769px) {
 	.Aligner {
 		min-height: 80vh;
 	}
@@ -178,22 +188,7 @@ header .header-content p {
 	}
 }
 
-
-/*--------------------------------------*/
-
-p {
-	line-height: 1.65;
-	margin-bottom: 20px;
-}
-
-.dark {
-	color: #dddada;
-	background: #1b3545;
-}
-
-i[class*="fa-check"] {
-	color: #e3c33b;
-}
+/*------------------个人信息按钮--------------------*/
 
 #details .btn-default {
 	color: #dddada;
@@ -223,19 +218,20 @@ i[class*="fa-check"] {
 
 }
 
-@media (min-width: 1199px) {
+@media screen and (min-width: 1199px) {
 	#details span {
 		padding-right: 98px;
 	}
 }
 
-/*----------------section basic layout-----------------------*/
+/*----------------------------------
+		Section layout
+-----------------------------------*/
 
 section,
 footer {
 	padding: 35px 0;
-	font-size: 1.3333333em;
-	/*16px*/
+	font-size: 1.3333333em;  /*16px*/
 }
 
 section hr {
@@ -243,13 +239,11 @@ section hr {
 }
 
 h5 {
-	/* line-height: 2em; */
 	margin: 0 0 18px;
 	font-size: 18px;
 }
 
 div > h5 > i {
-	/*名头icon*/
 	font-size: 20px;
 	padding-right: 10px;
 }
@@ -267,7 +261,7 @@ a.custom-link:hover {
 	color: #fff;
 }
 
-@media (min-width: 769px) {
+@media screen and (min-width: 769px) {
 	section,
 	footer {
 		padding: 70px 0;
@@ -281,21 +275,8 @@ a.custom-link:hover {
 	}
 }
 
-/*---------------------------------------*/
-
-.pad-block {
-	padding-top: 25px;
-}
-
-p.job-duties {
-	color: #95a5a6;
-	margin: 30px 0;
-}
-
-/*------------------------------------------*/
-
 .icon-size {
-	font-size: 5rem;
+	font-size: 3.125em; /* 50px */
 }
 
 ul.skill-icon {
@@ -319,7 +300,13 @@ ul.skill-icon > li:hover {
 	color: #1ABC9C;
 }
 
-/*----------------------------------------------*/
+ul.desirable-skills > li:not(:last-child) {
+	margin-bottom: 8px;
+}
+
+/*----------------------------------
+		Footer layout
+-----------------------------------*/
 
 footer {
 	background: #222;
@@ -343,8 +330,7 @@ footer dd:not(:last-child) {
 footer dd i.skip-icon {  /* 跳转的图标 */
 	font-size: 13px;
 	position: absolute;
-	top: -4px;
-	right: -18px;
+	padding-left: 5px;
 }
 
 footer ul li.left-slip-off {  /* 小屏幕微信图标位置 */
@@ -353,26 +339,49 @@ footer ul li.left-slip-off {  /* 小屏幕微信图标位置 */
 	top: 60px;
 }
 
-footer ul li a.locator .qr-code {  /* 隐藏的二维码 */
-	display: block;
+
+footer ul li a.locator .qr-code-frame {  /* 二维码边框位置 */
 	position: absolute;
 	top: 10px;
 	left: -160px;
-	opacity: 0;
 	width: 158px;
 	height: 145px;
 	border: 1px solid #fff;
 	border-radius: 11px;
+	behavior: url(PIE.htc);
 	-webkit-transform: translateX(10px);
 	transform: translateX(10px);
 	-webkit-transition: all 0.5s 0.3s;
 	transition: all 0.5s 0.3s;
-	background: #393939 url(../images/link-qr.png) 15% 50% no-repeat;
-	/*qr-code url*/
-	background-size: 130px 130px;
+}
+footer ul li a.locator .qr-code-frame {  /* 隐藏的二维码 */
+	display: block;
+	opacity: 0;
+}
+footer a.locator .qr-code-frame{ 
+	display: none;
+}
+footer ul li a.locator .qr-code-frame .qr-code {
+	display: block;
+	position: absolute;
+	top: 6px;
+	left: 3px;
+	width: 130px;
+	height: 130px;
+	background-image: url(../images/link-qr.png);
+	background: url(../images/link-qr.png) no-repeat 0 center/cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost:3000/asset/images/link-qr.png',sizingMethod='scale');
 }
 
-footer ul li a.locator .qr-code:after {  /* 向上箭头 */
+footer ul li .locator:hover .qr-code-frame, a.locator.active{  /* 悬停效果 */
+	opacity: 1 !important;
+	-webkit-transform: translateY(0) !important;
+	transform: translateY(0) !important;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+footer ul li a.locator .qr-code-frame:after {  /* 向上箭头 */
 	content: '';
 	position: absolute;
 	top: 35px;
@@ -382,23 +391,25 @@ footer ul li a.locator .qr-code:after {  /* 向上箭头 */
 	border-bottom: 23px solid transparent;
 }
 
-@media (min-width: 480px) {
-	footer ul li.left-slip-off {
+@media screen and (min-width: 480px) {
+	#left-slip {
 		display: inline-block;
 		position: relative;
 		top: 0;
 	}
-	footer ul li a.locator .qr-code {  /* 隐藏的二维码 */
+	footer ul li a.locator .qr-code-frame {  /* 隐藏的二维码 */
 		top: 70px;
-		left: initial;
+		left: 0px;
 		width: 140px;
 		height: 156px;
 		-webkit-transform: translateY(-10px);
 		transform: translateY(-10px);
-		background: #393939 url(../images/link-qr.png) 50% 85% no-repeat;
-		background-size: 130px 130px;
 	}
-	footer ul li a.locator .qr-code:after {  /* 向上箭头 */
+	footer ul li a.locator .qr-code-frame .qr-code {
+		top: 20px;
+		left: 4px;
+	}
+	footer ul li a.locator .qr-code-frame:after {  /* 向上箭头 */
 		top: -10px;
 		left: 20px;
 		border-left: 7px solid transparent;
@@ -407,17 +418,10 @@ footer ul li a.locator .qr-code:after {  /* 向上箭头 */
 	}
 }
 
-footer ul li a.locator:hover .qr-code {  /* 指示效果 */
-	opacity: 1;
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
-	-webkit-transition-delay: 0s;
-	transition-delay: 0s;
-}
 
-footer ul li a.locator .qr-code span {  /* qr-code上面的字 */
+footer ul li a.locator .qr-code-frame .qr-code-hint {  /* qr-code上面的字 */
 	position: inherit;
-	font-style: initial;
+	font-style: normal;
 	font-size: 15px;
 	color: #fff;
 	margin-left: 135px;
@@ -427,13 +431,13 @@ footer ul li a.locator .qr-code span {  /* qr-code上面的字 */
 	line-height: 17px;
 }
 
-@media (min-width: 480px) {
-	footer ul li a.locator .qr-code span {  /* qr-code上面的字 */
+@media screen and (min-width: 480px) {
+	footer ul li a.locator .qr-code-frame .qr-code-hint {
 		margin-left: 9px;
 		margin-top: 1px;
-		width: initial;
+		width: auto;
 	}
-	footer ul li a.locator:hover .qr-code {  /* 指示效果 */
+	footer ul li a.locator:hover .qr-code-frame {  /* 指示效果 */
 		-webkit-transform: translateY(0);
 		transform: translateY(0);
 	}

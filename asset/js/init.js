@@ -14,4 +14,10 @@ jQuery(function( $ ){
         rotate: { x: 0, y: 0, z: 10 },
         distance: '10px'
     }, 50);
+
+    $(".locator").mouseover(function() {
+        $(this).addClass('active');
+    }).mouseout(function() {
+        $(this).removeClass('active');
+    })
 });

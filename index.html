@@ -6,16 +6,21 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Alex - Resume Theme</title>
+	<script src="asset/js/modernizr.js"></script>
 	<!--    Bootstrap Core CSS    -->
 	<link rel="stylesheet" href="asset/css/bootstrap.min.css">
 
 	<!--    fontawesome Core CSS-->
 	<link rel="stylesheet" href="asset/css/font-awesome.min.css">
+	<link rel="stylesheet" href="asset/css/devicons.min.css">
 
 	<!--    Custom CSS    -->
 	<link rel="stylesheet" href="asset/css/main.css">
 
-	<link rel="stylesheet" href="asset/css/devicons.min.css">
+	<!--[if lt IE 9]>
+	<script src="https://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+	<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 
 	<!--    jQuery    -->
 	<script src="asset/js/jquery.min.js"></script>
@@ -63,7 +68,8 @@
 			<div class="row">
 				<div class="col-lg-2 col-lg-offset-1">
 					<h5>
-						<i class="fa fa-user-o" aria-hidden="true"></i>自我介绍
+						<i class="fa fa-user-o" aria-hidden="true"></i>
+						自我介绍
 					</h5>
 				</div>
 				<div class="col-lg-6">
@@ -88,7 +94,8 @@
 			<div class="row">
 				<div class="col-lg-2 col-lg-offset-1">
 					<h5>
-						<i class="fa fa-university" aria-hidden="true"></i>教育经历
+						<i class="fa fa-university" aria-hidden="true"></i>
+						教育经历
 					</h5>
 				</div>
 				<div class="col-lg-6">
@@ -118,7 +125,8 @@
 			<div class="row">
 				<div class="col-lg-2 col-lg-offset-1">
 					<h5>
-						<i class="fa fa-database" aria-hidden="true"></i>技能掌握
+						<i class="fa fa-database" aria-hidden="true"></i>
+						技能掌握
 					</h5>
 				</div>
 				<div class="col-lg-6">
@@ -162,9 +170,9 @@
 					</ul>
 				</div>
 				<div class="col-lg-3">
-					<ul class="fa-ul">
+					<ul class="fa-ul desirable-skills">
 						<li>
-							<i class="fa-li fa fa-check"></i>熟悉HTML5/CSS3/Javascript，及移动优先响应式Web设计
+							<i class="fa-li fa fa-check"></i>熟悉HTML5/CSS3/JavaScript，及移动优先响应式Web设计
 						</li>
 						<li>
 							<i class="fa-li fa fa-check"></i>熟悉JS及jquery常用库，Bootstrap等常用前端框架</li>
@@ -186,7 +194,8 @@
 			<div class="row">
 				<div class="col-lg-2 col-lg-offset-1">
 					<h5>
-						<i class="fa fa-address-card" aria-hidden="true"></i>联系方式
+						<i class="fa fa-address-card" aria-hidden="true"></i>
+						联系方式
 					</h5>
 				</div>
 				<div class="col-xs-6 col-lg-6">
@@ -194,10 +203,11 @@
 						<dt>邮箱:</dt>
 						<dd>
 							<a class="defult-link locator" href="mailto:wangqiwenboy@hotmail.com">wangqiwenboy@hotmail.com
-									<i class="skip-icon fa fa-envelope-open"></i></a>
+								<i class="skip-icon fa fa-envelope-open"></i>
+							</a>
 						</dd>
 						<dt>地址:</dt>
-						<dd>辽宁省沈阳市沈河区泉园一路</dd>
+						<dd>辽宁省沈阳市沈河区</dd>
 						<dt>电话:</dt>
 						<dd>
 							<a class="defult-link locator" href="tel:+86 15242430384">+86 15242430384
@@ -209,12 +219,13 @@
 				<div class="col-xs-6 col-lg-3">
 					<h5 class="sr-only">The icon link</h5>
 					<ul class="list-inline icon-size pull-right">
-						<li class="left-slip-off">
-							<a class="locator">
+						<li id="left-slip" class="left-slip-off">
+							<a class="no-touchevents locator">
 								<i class="fa fa-weixin wechat"></i>
 								<span class="sr-only">The QR code</span>
-								<i class="qr-code">
-									<span>扫一扫用手机浏览</span>
+								<i class="qr-code-frame">
+									<span class="qr-code-hint">扫一扫用手机浏览</span>
+									<span class="qr-code"></span>
 								</i>
 							</a>
 						</li>
