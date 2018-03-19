@@ -36,6 +36,7 @@ p {
 	margin-bottom: 20px;
 }
 
+.riqi {color:rgb(211, 26, 26);}
 .locator {
 	position: relative;
 }
@@ -373,12 +374,12 @@ footer ul li a.locator .qr-code-frame .qr-code {
 	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost:3000/asset/images/link-qr.png',sizingMethod='scale');
 }
 
-footer ul li .locator:hover .qr-code-frame, a.locator.active{  /* 悬停效果 */
-	opacity: 1 !important;
-	-webkit-transform: translateY(0) !important;
-	transform: translateY(0) !important;
-	-webkit-transition-delay: 0s;
-	transition-delay: 0s;
+footer ul li a.active,
+footer ul li a.locator .qr-code-frame.active{  /* 悬停效果 */
+	color: #fff;
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
 }
 
 footer ul li a.locator .qr-code-frame:after {  /* 向上箭头 */
@@ -398,7 +399,7 @@ footer ul li a.locator .qr-code-frame:after {  /* 向上箭头 */
 		top: 0;
 	}
 	footer ul li a.locator .qr-code-frame {  /* 隐藏的二维码 */
-		top: 70px;
+		top: 60px;
 		left: 0px;
 		width: 140px;
 		height: 156px;
@@ -419,7 +420,7 @@ footer ul li a.locator .qr-code-frame:after {  /* 向上箭头 */
 }
 
 
-footer ul li a.locator .qr-code-frame .qr-code-hint {  /* qr-code上面的字 */
+footer ul li .locator .qr-code-frame .qr-code-hint {  /* qr-code上面的字 */
 	position: inherit;
 	font-style: normal;
 	font-size: 15px;
@@ -437,8 +438,11 @@ footer ul li a.locator .qr-code-frame .qr-code-hint {  /* qr-code上面的字 */
 		margin-top: 1px;
 		width: auto;
 	}
-	footer ul li a.locator:hover .qr-code-frame {  /* 指示效果 */
+	.no-touchevents footer ul li a.locator:hover .qr-code-frame {  /* 指示效果 */
+		opacity: 1;
 		-webkit-transform: translateY(0);
 		transform: translateY(0);
+		-webkit-transition-delay: 0s;
+		transition-delay: 0s;
 	}
 }

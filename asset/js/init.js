@@ -15,9 +15,11 @@ jQuery(function( $ ){
         distance: '10px'
     }, 50);
 
-    $(".locator").mouseover(function() {
-        $(this).addClass('active');
-    }).mouseout(function() {
-        $(this).removeClass('active');
+    $('.locator').on('click', function() {
+        if ($('.qr-code-frame').is('.active')) {
+            $('.qr-code-frame,.locator').removeClass('active');
+        } else {
+            $('.qr-code-frame,.locator').addClass('active');
+        }
     })
 });
