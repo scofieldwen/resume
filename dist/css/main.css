@@ -1,0 +1,455 @@
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	padding-top: 52px;  /* font-size: 1.2em; */
+	font-size: 12px;
+	line-height: 1.65em;
+	background-color: #f2f2f2;
+	color: #555;
+	word-break: break-all;
+}
+
+hr {
+	border-top: 1px solid #ccc;
+}
+
+a {
+	-webkit-transition: all 0.35s;
+	transition: all 0.35s;
+	color: #9d9d9d;
+}
+
+a:visited {
+	color: #9d9d9d;
+}
+
+a.defult-link, a.defult-link:hover {
+color: #fff;
+}
+
+p {
+	line-height: 1.65;
+	margin-bottom: 20px;
+}
+
+.riqi {color:rgb(211, 26, 26);}
+.locator {
+	position: relative;
+}
+
+.dark {  /* 暗色背景 */
+	color: #dddada;
+	background: #1b3545;
+}
+
+i[class*="fa-check"] { /* 技能栏图标颜色 */
+	color: #e3c33b;
+}
+
+/*--------------------------------
+        Topbar
+---------------------------------*/
+
+nav .navbar-nav {
+	float: none;
+	display: table;
+	margin: 0 auto;
+}
+
+nav .navbar-nav > li {
+	float: none;
+	display: inline-block;
+}
+
+nav.navbar ul > li:first-child {
+	border-left: 1px solid rgba(98, 98, 98, 0.5);
+}
+
+nav.navbar ul > li {
+	border-right: 1px solid rgba(98, 98, 98, 0.5);
+}
+
+nav.navbar ul > li > a {
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+
+#topbar i {
+	font-size: 23px;
+}
+
+/*----------------------------------
+		Header
+-----------------------------------*/
+
+/*针对于IE10浏览器minheight兼容问题
+*需要把此类样式添加到flex容器中
+*/
+
+.u-ieMinHeightBugFix {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+.Aligner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: relative;
+	z-index: 0;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	/* justify-content: center; */
+	margin: 0;
+}
+
+.header-picture {
+	width: 150px;
+	height: 150px;
+	margin: 30px auto 20px;
+}
+
+.header-picture > img {
+	max-width: 100%;
+	behavior: url(PIE.htc);
+	border-radius: 50%;
+	-webkit-filter: sepia(85%) hue-rotate(-14deg);
+	filter: sepia(85%) hue-rotate(-14deg);
+	-webkit-box-shadow: 0 0 0 0 #1ABC9C;
+	box-shadow: 0 0 0 0 #1ABC9C;
+	-webkit-transition-duration: .5s;
+	transition-duration: .5s;
+	-webkit-transition-property: -webkit-filter, -webkit-box-shadow;
+	transition-property: -webkit-filter, -webkit-box-shadow;
+	transition-property: filter, box-shadow, -webkit-filter, -webkit-box-shadow;
+	transition-property: filter, box-shadow;
+}
+
+.header-picture > img:hover,
+.header-picture > img:focus {
+	-webkit-filter: none;
+	filter: none;
+	-webkit-box-shadow: 0 0 0 8px #1ABC9C;
+	box-shadow: 0 0 0 8px #1ABC9C;
+}
+
+header,
+.header-content:before {  /*设置背景路径*/
+	background: url('../images/1_bg.jpg') 0 / cover fixed;
+}
+
+/*------------虚化背景-----------------*/
+header .header-content {
+	color: #000000;
+	width: 100%;
+	text-align: center;
+	background: hsla(0, 0%, 100%, .2) border-box;
+	overflow: hidden;
+	text-shadow: 0 1px 1px hsla(0, 0%, 100%, .3);
+	margin: auto;
+}
+
+.header-content:before {
+	content: '';
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	margin: -30px;
+	z-index: -1;
+}
+
+header .header-content h1 {
+	font-size: 4.1666em;  /*50px*/
+}
+
+header .header-content p {
+	font-size: 1.3333em;  /*16px*/
+}
+
+@media screen and (min-width: 769px) {
+	.Aligner {
+		min-height: 80vh;
+	}
+	header .header-content {
+		/*		margin: auto;*/
+		padding: 1em;
+		width: 30em;
+		border-radius: .5em;
+		-webkit-box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset,
+		0 0.5em 1em rgba(0, 0, 0, 0.6);
+		box-shadow: 0 0 0 1px hsla(0, 0%, 100%, .3) inset,
+		0 0.5em 1em rgba(0, 0, 0, 0.6);
+	}
+}
+
+/*------------------个人信息按钮--------------------*/
+
+#details .btn-default {
+	color: #dddada;
+	background-color: transparent;
+}
+
+#details .btn-default:hover {
+	color: #fff;
+	background-color: rgba(255, 255, 255, .18);
+}
+
+#details .btn {
+	padding: 6px 29px;
+	margin: 0;
+	border-radius: 0;
+}
+
+#details span {
+	display: block;
+	font-size: 13px;
+	font-style: italic;
+	color: #a5a5a5;
+}
+
+#details div > a {
+	font-size: 18px;
+
+}
+
+@media screen and (min-width: 1199px) {
+	#details span {
+		padding-right: 98px;
+	}
+}
+
+/*----------------------------------
+		Section layout
+-----------------------------------*/
+
+section,
+footer {
+	padding: 35px 0;
+	font-size: 1.3333333em;  /*16px*/
+}
+
+section hr {
+	margin-top: 20px;
+}
+
+h5 {
+	margin: 0 0 18px;
+	font-size: 18px;
+}
+
+div > h5 > i {
+	font-size: 20px;
+	padding-right: 10px;
+}
+
+#details div > a > i {
+	font-size: 20px;
+	padding-right: 10px;
+}
+
+a.custom-link {
+	color: inherit;
+}
+
+a.custom-link:hover {
+	color: #fff;
+}
+
+@media screen and (min-width: 769px) {
+	section,
+	footer {
+		padding: 70px 0;
+	}
+	section hr {
+		margin-top: 30px;
+	}
+
+	.pad-block {
+		padding-top: 50px;
+	}
+}
+
+.icon-size {
+	font-size: 3.125em; /* 50px */
+}
+
+ul.skill-icon {
+	margin-top: 7px;
+	padding-left: 23px;
+	padding-right: 23px;
+}
+
+#skills ul > li > span {
+	display: block;
+	font-size: 12px;
+	color: #a0a0a0;
+	text-align: center;
+}
+
+ul.skill-icon > li {
+	margin-bottom: 15px;
+}
+
+ul.skill-icon > li:hover {
+	color: #1ABC9C;
+}
+
+ul.desirable-skills > li:not(:last-child) {
+	margin-bottom: 8px;
+}
+
+/*----------------------------------
+		Footer layout
+-----------------------------------*/
+
+footer {
+	background: #222;
+	color: #f2f2f2;
+}
+
+
+footer ul li a:hover,
+footer ul li a:focus {
+	color: #fff;
+}
+
+footer dd {
+	line-height: 1.5;
+}
+
+footer dd:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+footer dd i.skip-icon {  /* 跳转的图标 */
+	font-size: 13px;
+	position: absolute;
+	padding-left: 5px;
+}
+
+footer ul li.left-slip-off {  /* 小屏幕微信图标位置 */
+	display: block;
+	position: absolute;
+	top: 60px;
+}
+
+
+footer ul li a.locator .qr-code-frame {  /* 二维码边框位置 */
+	position: absolute;
+	top: 10px;
+	left: -160px;
+	width: 158px;
+	height: 145px;
+	border: 1px solid #fff;
+	border-radius: 11px;
+	behavior: url(PIE.htc);
+	-webkit-transform: translateX(10px);
+	transform: translateX(10px);
+	-webkit-transition: all 0.5s 0.3s;
+	transition: all 0.5s 0.3s;
+}
+footer ul li a.locator .qr-code-frame {  /* 隐藏的二维码 */
+	display: block;
+	opacity: 0;
+}
+footer a.locator .qr-code-frame{ 
+	display: none;
+}
+footer ul li a.locator .qr-code-frame .qr-code {
+	display: block;
+	position: absolute;
+	top: 6px;
+	left: 3px;
+	width: 130px;
+	height: 130px;
+	background-image: url(../images/link-qr.png);
+	background: url(../images/link-qr.png) no-repeat 0 center/cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost:3000/asset/images/link-qr.png',sizingMethod='scale');
+}
+
+footer ul li a.active,
+footer ul li a.locator .qr-code-frame.active{  /* 悬停效果 */
+	color: #fff;
+	opacity: 1;
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+
+footer ul li a.locator .qr-code-frame:after {  /* 向上箭头 */
+	content: '';
+	position: absolute;
+	top: 35px;
+	left: 157px;
+	border-left: 9px solid #fff;
+	border-top: 0px solid transparent;
+	border-bottom: 23px solid transparent;
+}
+
+@media screen and (min-width: 480px) {
+	#left-slip {
+		display: inline-block;
+		position: relative;
+		top: 0;
+	}
+	footer ul li a.locator .qr-code-frame {  /* 隐藏的二维码 */
+		top: 60px;
+		left: 0px;
+		width: 140px;
+		height: 156px;
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+	footer ul li a.locator .qr-code-frame .qr-code {
+		top: 20px;
+		left: 4px;
+	}
+	footer ul li a.locator .qr-code-frame:after {  /* 向上箭头 */
+		top: -10px;
+		left: 20px;
+		border-left: 7px solid transparent;
+		border-right: 7px solid transparent;
+		border-bottom: 9px solid #fff;
+	}
+}
+
+
+footer ul li .locator .qr-code-frame .qr-code-hint {  /* qr-code上面的字 */
+	position: inherit;
+	font-style: normal;
+	font-size: 15px;
+	color: #fff;
+	margin-left: 135px;
+	margin-top: 3px;
+	width: 20px;
+	font-weight: 700;
+	line-height: 17px;
+}
+
+@media screen and (min-width: 480px) {
+	footer ul li a.locator .qr-code-frame .qr-code-hint {
+		margin-left: 9px;
+		margin-top: 1px;
+		width: auto;
+	}
+	.no-touchevents footer ul li a.locator:hover .qr-code-frame {  /* 指示效果 */
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		-webkit-transition-delay: 0s;
+		transition-delay: 0s;
+	}
+}
