@@ -99,9 +99,6 @@ var gulp = require('gulp'),
 
     //复制fonts/,pdf/,vendor/ -> docs/
     gulp.task('copy', function() {
-        gulp.src('src/fonts/*')
-        .pipe(gulp.dest('docs/fonts/')),
-
         gulp.src('src/pdf/*')
         .pipe(gulp.dest('docs/pdf/'))
 
