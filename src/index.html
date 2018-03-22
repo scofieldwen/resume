@@ -6,16 +6,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Alex - Resume Theme</title>
-	<script src="asset/js/modernizr.js"></script>
+	<script src="vendor/modernizr.min.js"></script>
 	<!--    Bootstrap Core CSS    -->
-	<link rel="stylesheet" href="asset/css/bootstrap.min.css">
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 
 	<!--    fontawesome Core CSS-->
-	<link rel="stylesheet" href="asset/css/font-awesome.min.css">
-	<link rel="stylesheet" href="asset/css/devicons.min.css">
+	<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendor/devicons/css/devicons.min.css">
 
 	<!--    Custom CSS    -->
-	<link rel="stylesheet" href="asset/css/main.css">
+	<link rel="stylesheet" href="css/main.css">
 
 	<!--[if lt IE 9]>
 	<script src="https://cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
@@ -23,7 +23,7 @@
 	<![endif]-->
 
 	<!--    jQuery    -->
-	<script src="asset/js/jquery.min.js"></script>
+	<script src="vendor/jquery/jquery.min.js"></script>
 </head>
 
 <body id="page-top">
@@ -55,7 +55,7 @@
 		<div class="Aligner">
 			<div class="header-content locator">
 				<div class="header-picture">
-					<img src="asset/images/me.jpg" alt="head portrait">
+					<img src="images/me.jpg" alt="head portrait">
 				</div>
 				<h1 id="homeHeading">王琦文</h1>
 				<p>应聘职位&nbsp;|&nbsp;Web前端开发</p>
@@ -77,7 +77,7 @@
 					</p>
 				</div>
 				<div class="col-lg-3 pull-right">
-					<a class="btn btn-default" href="asset/pdf/resume_1.compressed.pdf">
+					<a class="btn btn-default" href="pdf/resume_1.compressed.pdf">
 						<i class="fa fa-file-pdf-o"></i>
 						下载简历
 					</a>
@@ -242,15 +242,18 @@
 	</footer>
 
 	<!--    Bootstrap Core Javascript    -->
-	<script src="asset/js/bootstrap.min.js"></script>
-	<!--    Scroll plug-in    -->
-	<script src="asset/js/jquery.scrollTo.min.js"></script>
-	<!--    depend on scrollTo.js-->
-	<script src="asset/js/jquery.localScroll.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-	<script src="asset/js/scrollreveal.min.js"></script>
+	<!-- build:js vendor/scrollto.min.js -->
+		<!--    Scroll plug-in    -->
+	<script src="vendor/jquery.scrollto/jquery.scrollTo.min.js"></script>
+		<!--    depend on scrollTo.js-->
+	<script src="vendor/jquery.localscroll/jquery.localScroll.min.js"></script>
+	<!-- endbuild -->
 
-	<script src="asset/js/init.js"></script>
+	<script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+
+	<script src="js/init.js"></script>
 
 </body>
 
